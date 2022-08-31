@@ -1,3 +1,7 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['gcloud', 'alpha', 'storage', 'cp', 'https://github.com/Bitdragon50/cloud_resume/tree/main', 'gs://gs://alan_resume']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+ entrypoint: 'gcloud'
+ timeout: 240s
+ args: ['alpha', 'storage', 'cp', 'https://github.com/Bitdragon50/cloud_resume/tree/main', 'gs://gs://alan_resume']
+ env:
+ - 'CLOUDSDK_COMPUTE_REGION=eu-west2'
