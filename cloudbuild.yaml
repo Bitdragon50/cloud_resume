@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['gcloud', 'alpha', 'storage', 'cp', 'https://github.com/Bitdragon50/cloud_resume/tree/main', 'gs://gs://alan_resume']
